@@ -1,16 +1,19 @@
 import ContactHeader from "./ContactHeader";
 import ContactForm from "./ContactForm";
+import Image from "next/image";
 
 const ContactMain = () => {
   return (
-    <div
-      className="relative flex min-h-[50rem] w-full flex-col items-center px-5 pt-40 pb-20 text-center"
-      style={{
-        backgroundImage: "url(/static/looper.svg)",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
+    <div className="relative flex min-h-[50rem] w-full flex-col items-center px-5 pb-20 pt-40 text-center">
+      <div className="absolute -right-[200px] top-0 -z-10 flex h-full w-full items-center justify-center">
+        <Image
+          src="/static/looper.svg"
+          width={1970}
+          height={1200}
+          alt="Looper"
+          className="min-w-[1970px]"
+        />
+      </div>
       <ContactHeader />
       <ContactForm />
       <div className="absolute left-0 top-0">{gradientSvg}</div>
